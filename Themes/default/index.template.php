@@ -36,6 +36,8 @@
 */
 
 // Initialize the template... mainly little settings.
+require_once($boarddir.'/header.php');
+
 function template_init()
 {
 	global $context, $settings, $options, $txt;
@@ -49,7 +51,7 @@ function template_init()
 	/* What document type definition is being used? (for font size and other issues.)
 		'xhtml' for an XHTML 1.0 document type definition.
 		'html' for an HTML 4.01 document type definition. */
-	$settings['doctype'] = 'xhtml';
+	$settings['doctype'] = 'html';
 
 	/* The version this template/theme is for.
 		This should probably be the version of SMF it was created for. */
@@ -82,24 +84,26 @@ function template_html_above()
 	//$context['character_set'] = 'GBK';
 
 	// Show right to left and the character set for ease of translating.
-	echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"', $context['right_to_left'] ? ' dir="rtl"' : '', '>
+	echo '<!DOCTYPE html>
+<html', $context['right_to_left'] ? ' dir="rtl"' : '', '>
 <head>';
 
+	echo '<link rel="stylesheet" type="text/css" href="initialize.css">
+<link rel="stylesheet" type="text/css" href="style.css">';
+
 	// The ?fin20 part of this link is just here to make sure browsers don't cache it wrongly.
-	echo '
-	<link rel="stylesheet" type="text/css" href="', $settings['theme_url'], '/css/index', $context['theme_variant'], '.css?fin20" />';
+	//echo '\n<link rel="stylesheet" type="text/css" href="', $settings['theme_url'], '/css/index', $context['theme_variant'], '.css?fin20" />';
 
 	// Some browsers need an extra stylesheet due to bugs/compatibility issues.
-	foreach (array('ie7', 'ie6', 'webkit') as $cssfix)
-		if ($context['browser']['is_' . $cssfix])
-			echo '
-	<link rel="stylesheet" type="text/css" href="', $settings['default_theme_url'], '/css/', $cssfix, '.css" />';
+	//foreach (array('ie7', 'ie6', 'webkit') as $cssfix)
+	//	if ($context['browser']['is_' . $cssfix])
+	//		echo '
+	//<link rel="stylesheet" type="text/css" href="', $settings['default_theme_url'], '/css/', $cssfix, '.css" />';
 
 	// RTL languages require an additional stylesheet.
-	if ($context['right_to_left'])
-		echo '
-	<link rel="stylesheet" type="text/css" href="', $settings['theme_url'], '/css/rtl.css" />';
+	//if ($context['right_to_left'])
+	//	echo '
+	//<link rel="stylesheet" type="text/css" href="', $settings['theme_url'], '/css/rtl.css" />';
 
 	// Here comes the JavaScript bits!
 	echo '
@@ -120,10 +124,7 @@ function template_html_above()
 		addLoadEvent(fPmPopup);' : '', '
 		var ajax_notification_text = "', $txt['ajax_in_progress'], '";
 		var ajax_notification_cancel_text = "', $txt['modify_cancel'], '";
-	// ]]></script>';
-
-	echo '
-	<meta http-equiv="Content-Type" content="text/html; charset=', $context['character_set'], '" />
+	// ]]></script>
 	<meta name="description" content="', $context['page_title_html_safe'], '" />', !empty($context['meta_keywords']) ? '
 	<meta name="keywords" content="' . $context['meta_keywords'] . '" />' : '', '
 	<title>', $context['page_title_html_safe'], '</title>';
@@ -132,11 +133,6 @@ function template_html_above()
 	if (!empty($context['robot_no_index']))
 		echo '
 	<meta name="robots" content="noindex" />';
-
-	// Present a canonical url for search engines to prevent duplicate content in their indices.
-	if (!empty($context['canonical_url']))
-		echo '
-	<link rel="canonical" href="', $context['canonical_url'], '" />';
 
 	// Show all the relative links, such as help, search, contents, and the like.
 	echo '
@@ -165,12 +161,16 @@ function template_html_above()
 
 	echo '
 </head>
-<body>';
+<body>
+	';
 }
 
 function template_body_above()
 {
 	global $context, $settings, $options, $scripturl, $txt, $modSettings;
+	//echo $boarddir.'/header.php';
+
+	get_header();
 
 	echo !empty($settings['forum_width']) ? '
 <div id="wrapper" style="width: ' . $settings['forum_width'] . '">' : '', '

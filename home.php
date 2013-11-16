@@ -1,50 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>诺丁汉中国学联 - 主页</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link rel="stylesheet" type="text/css" href="initialize.css">
-<link rel="stylesheet" type="text/css" href="style.css">
+<?php
+require_once(dirname(__FILE__) . '/header.php');
+?>
+<?php get_html_head() ?>
+	<title>诺丁汉中国学联 - 主页</title>
 </head>
 <body>
-	<header>
-		<div id="Header">
-			<div class="wrapper">
-				<div class="wrapperShadow clearfix">
-					<div>
-						<h2 id="siteName">诺丁汉中国学联</h2>
-						<a class="english rightFloat" href="#">English</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="Nav">
-			<div class="wrapper">
-				<div class="wrapperShadow clearfix">
-					<div id="navList" class="clearfix">
-					<nav>
-						<ul class="clearfix">
-							<li><a href="#">主页</a></li>
-							<li><a href="#">论坛</a></li>
-							<li><a href="#">学联微博</a></li>
-							<li><a href="#">学联人人</a></li>
-							<li class="rightFloat"><a href="http://cssanott.co.uk">回到旧版论坛</a><li>
-						</ul>
-					</nav>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="Logo">
-			<div class="wrapper">
-				<div class="wrapperShadow">
-					<div id="siteLogo">
-						<a href="#"><img src="images/logo.png"></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
+<?php get_header(); ?>
 	<div id="Main">
 		<div class="wrapper">
 			<div class="wrapperShadow">
