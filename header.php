@@ -50,5 +50,41 @@ echo '<header>
 				</div>
 			</div>
 		</div>
-	</header>';
+	</header>
+	<div id="Main">
+		<div class="wrapper">
+			<div class="wrapperShadow">';
+}
+
+function get_footer() {
+	echo '<footer>
+					<div id="footer" class="clearfix">
+						<h5>诺丁汉中国学联</h5>
+						<div id="footerLink">
+							<h6>友情链接</h6>
+							<ul>
+								<li><a class="english" href="">Lorem ipsum dolor.</a></li>
+								<li><a class="english" href="">Sed, assumenda, ipsum!</a></li>
+								<li><a class="english" href="">Commodi, assumenda, eveniet.</a></li>
+							</ul>
+						</div>
+						<div id="footerAbout">
+							<h6>关于网站</h6>
+							<ul>
+								<li><a class="english" href="">Lorem ipsum dolor.</a></li>
+								<li><a class="english" href="">Officia, ipsa, pariatur?</a></li>
+								<li><a class="english" href="">Tempore, repellendus, ipsam.</a></li>
+								<li><a class="english" href="">Distinctio, dolorem, ducimus.</a></li>
+							</ul>
+						</div>
+					</div>
+					<div id="copyright">
+						<p>Copyright © 2013 诺丁汉中国学联版权所属。网站制作人：石清琪</p>
+					</div>
+				</footer>
+			</div>
+		</div>
+	</div>
+</body>
+</html>';
 }

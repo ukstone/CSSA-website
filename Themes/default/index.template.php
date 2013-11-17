@@ -330,36 +330,13 @@ function template_body_below()
 {
 	global $context, $settings, $options, $scripturl, $txt, $modSettings;
 
-	echo '
-		</div>
-	</div></div>';
-
-	// Show the "Powered by" and "Valid" logos, as well as the copyright. Remember, the copyright must be somewhere!
-	echo '
-	<div id="footer_section"><div class="frame">
-		<ul class="reset">
-			<li class="copyright">', theme_copyright(), '</li>
-			<li><a id="button_xhtml" href="http://validator.w3.org/check?uri=referer" target="_blank" class="new_win" title="', $txt['valid_xhtml'], '"><span>', $txt['xhtml'], '</span></a></li>
-			', !empty($modSettings['xmlnews_enable']) && (!empty($modSettings['allow_guestAccess']) || $context['user']['is_logged']) ? '<li><a id="button_rss" href="' . $scripturl . '?action=.xml;type=rss" class="new_win"><span>' . $txt['rss'] . '</span></a></li>' : '', '
-			<li class="last"><a id="button_wap2" href="', $scripturl , '?wap2" class="new_win"><span>', $txt['wap2'], '</span></a></li>
-		</ul>';
-
-	// Show the load time?
-	if ($context['show_load_time'])
-		echo '
-		<p>', $txt['page_created'], $context['load_time'], $txt['seconds_with'], $context['load_queries'], $txt['queries'], '</p>';
-
-	echo '
-	</div></div>', !empty($settings['forum_width']) ? '
-</div>' : '';
+	get_footer();
 }
 
 function template_html_below()
 {
 	global $context, $settings, $options, $scripturl, $txt, $modSettings;
 
-	echo '
-</body></html>';
 }
 
 // Show a linktree. This is that thing that shows "My Community | General Category | General Discussion"..
