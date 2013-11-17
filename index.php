@@ -52,7 +52,6 @@ require_once($sourcedir . '/Subs.php');
 require_once($sourcedir . '/Errors.php');
 require_once($sourcedir . '/Load.php');
 require_once($sourcedir . '/Security.php');
-require_once(substr($scripturl, 0, -10). '/header.php');
 
 // Using an pre-PHP 5.1 version?
 if (@version_compare(PHP_VERSION, '5.1') == -1)

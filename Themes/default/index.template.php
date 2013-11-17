@@ -36,7 +36,7 @@
 */
 
 // Initialize the template... mainly little settings.
-require_once($boarddir.'/header.php');
+require_once($boarddir.'/common.php');
 
 function template_init()
 {

@@ -1,5 +1,5 @@
 <?php
-require_once(dirname(__FILE__) . '/header.php');
+require_once(dirname(__FILE__) . '/common.php');
 ?>
 <?php get_html_head() ?>
 	<title>诺丁汉中国学联 - 主页</title>
