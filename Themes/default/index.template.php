@@ -330,6 +330,10 @@ function template_body_below()
 {
 	global $context, $settings, $options, $scripturl, $txt, $modSettings;
 
+	echo '</div>
+	</div></div></div>
+				';
+
 	get_footer();
 }
 

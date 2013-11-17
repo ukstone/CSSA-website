@@ -45,7 +45,7 @@ echo '<header>
 			<div class="wrapper">
 				<div class="wrapperShadow">
 					<div id="siteLogo">
-						<a href="#"><img src="images/logo.png"></a>
+						<a href="',$boardurl,'"><img src="images/logo.png"></a>
 					</div>
 				</div>
 			</div>

@@ -112,6 +112,14 @@ a:hover {
 		min-height: 48px;
 	}
 
+	#Header a {
+		line-height: 1;
+		position: absolute;
+		right: 20px;
+		bottom: 15px;
+		font-size: 92.2%;
+	}
+
 	#siteName {
 		letter-spacing: 4px;
 		line-height: 1;
