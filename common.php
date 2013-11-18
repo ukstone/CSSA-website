@@ -32,9 +32,9 @@ echo '<header>
 						<ul class="clearfix">
 							<li><a href="',$boardurl,'">主页</a></li>
 							<li><a href="',$boardurl,'/index.php">论坛</a></li>
-							<li><a href="#">学联微博</a></li>
-							<li><a href="#">学联人人</a></li>
-							<li class="rightFloat"><a href="http://cssanott.co.uk">回到旧版论坛</a><li>
+							<li><a href="http://weibo.com/cssanottingham" target="_blank">学联微博</a></li>
+							<li><a href="http://page.renren.com/600406948" target="_blank">学联人人</a></li>
+							<li class="rightFloat"><a href="http://cssanott.co.uk" target="_blank">回到旧版论坛</a><li>
 						</ul>
 					</nav>
 					</div>
